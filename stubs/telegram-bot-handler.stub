@@ -1,0 +1,24 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Models\TelegramBot;
+
+class {{ class }}
+{
+    public function __invoke(TelegramBot $bot, array $update): void
+    {
+        $message = $update['message'] ?? null;
+        $callbackQuery = $update['callback_query'] ?? null;
+
+        if ($message !== null) {
+            // Handle incoming messages here.
+            return;
+        }
+
+        if ($callbackQuery !== null) {
+            // Handle callback queries here.
+            return;
+        }
+    }
+}
